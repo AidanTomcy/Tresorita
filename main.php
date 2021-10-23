@@ -1,0 +1,357 @@
+<?php 
+  session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="For your well-being...">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/vendors/glightbox/css/glightbox.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"/>
+    <link rel="manifest" href="img/manifest.json"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <title>Tresorita</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="main.php">
+        <img src="images/logo.png" alt="tresorita logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link navbar-title active">&nbsp;&nbsp;Tresorita</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="main.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="images.php">Images</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="charityfund.php">Tresorita Trust</a></li>
+          <?php 
+            if (isset($_SESSION["useruid"])) {
+              echo '<li class="nav-item"><a class="nav-link" href="includes/logout.inc.php">Logout</a></li>';
+            }
+            else {
+              echo '<li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>';
+              echo '<li class="nav-item"><a class="nav-link" href="signup.php">Sign up</a></li>';
+            }
+          ?>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<section id="home" class="intro-section">
+  <div class="container">
+    <div class="row align-items-center text-white">
+      <div class="col-md-6 intros text-start">
+        <h1 class="display-2">
+          <span class="display-2--intro title">Tresorita</span>
+          <span class="display-2--description lh-base">
+          <p class="motto">For your well-being...</p>
+          <?php 
+            if (isset($_SESSION["useruid"])) {
+              echo '<p class="welcome">Welcome, ' . $_SESSION["useruid"] . '</p>';
+            }
+          ?>  
+
+          </span>
+        </h1>
+        <button onclick="aboutUs();" type="button" class="rounded-pill btn-rounded" id="know-more">Know more
+          <span><i class="fas fa-arrow-right"></i></span>
+        </button>
+      </div>
+      
+      <div class="col-md-6 intros text-end">
+        <div class="video-box">
+          <img src="images/tresorita-logo.jpg" alt="image" class="img-fluid" width="500">
+          <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+</section>
+
+
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <div class="row text-center mt-5">
+      <h1 class="display-3 fw-bold text-capitalize title">Images</h1>
+      <div class="heading-line"></div>
+    </div>
+      
+
+    
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-box shadow">
+          <img src="images/img-1.jpg" alt="img-1" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-box shadow">
+          <img src="images/img-2.jpg" alt="img-2" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-box shadow">
+          <img src="images/img-3.jpg" alt="img-3" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-box shadow">
+          <img src="images/img-4.jpg" alt="img-4" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-box shadow">
+          <img src="images/img-5.jpg" alt="img-5" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-box shadow">
+          <img src="images/img-6.jpg" alt="img-6" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-box shadow">
+          <img src="images/img-7.jpg" alt="img-7" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-box shadow">
+          <img src="images/img-8.jpg" alt="img-8" class="img-fluid">
+        </div>
+      </div>
+     <div class="col-lg-4 col-md-6">
+        <div class="portfolio-box shadow">
+          <img src="images/img-9.jpg" alt="img-9" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="get-started">
+  <div class="container">
+    <div class="row text-center">
+      <h1 class="display-3 fw-bold text-capitalize title">Contact Us</h1>
+      <div class="heading-line"></div>
+      <p class="lh-lg">
+        Contact us at any time, and you should get a response within 12 hours.
+      </p>
+    </div>
+
+
+    <div class="row text-white">
+      <div class="col-12 col-lg-6 gradient shadow p-3">
+        <div class="cta-info w-100">
+          <h4 class="display-4 fw-bold"></h4>
+          <p class="lh-lg">
+               If you have any doubts/complaints/feedback, please fill this form with the appropriate details and we will get back to you.
+          </p>
+          <h3 class="display-3--brief">What will be the next step?</h3>
+          <ul class="cta-info__list">
+            <li>You'll submit this form.</li>
+            <li>We'll look at it.</li>
+            <li>You will get a response.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 bg-white shadow p-3">
+        <div class="form w-100 pb-2">
+          <h4 class="display-3--title mb-5 title">Contact us</h4>
+          <form action="submitform.php" method="post" class="row">
+            <div class="col-lg-6 col-md mb-3">
+              <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg" name="firstName">
+            </div>
+            <div class="col-lg-6 col-md mb-3">
+              <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg" name="lastName">
+            </div>
+            <div class="col-lg-12 mb-3">
+              <input type="email" placeholder="Email Address" id="inputEmail" class="shadow form-control form-control-lg" name="email">
+            </div>
+            <div class="col-lg-12 mb-3">
+              <textarea name="message" placeholder="Message" id="message" rows="8" class="shadow form-control form-control-lg" name="message"></textarea>
+            </div>
+            <div class="text-center d-grid mt-1">
+              <input type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
+                Submit
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+        <div class="contact-box__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+            <path d="M15 7a2 2 0 0 1 2 2" />
+            <path d="M15 3a6 6 0 0 1 6 6" />
+          </svg>
+        </div>
+        <div class="contact-box__info">
+          <a href="tel:+919820184902" class="contact-box__info--title">+91 98201 84902</a>
+          <p class="contact-box__info--subtitle">  Mon-Fri 9am-6pm</p>
+        </div>
+      </div>  
+      <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+        <div class="contact-box__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-opened" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <polyline points="3 9 12 15 21 9 12 3 3 9" />
+            <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+            <line x1="3" y1="19" x2="9" y2="13" />
+            <line x1="15" y1="13" x2="21" y2="19" />
+          </svg>
+        </div>
+        <div class="contact-box__info">
+          <a href="mailto:josi@inoways.com" class="contact-box__info--title">josi@inoways.com</a>
+          <p class="contact-box__info--subtitle">Online support</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+        <div class="contact-box__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <line x1="18" y1="6" x2="18" y2="6.01" />
+            <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+            <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+            <line x1="9" y1="4" x2="9" y2="17" />
+            <line x1="15" y1="15" x2="15" y2="20" />
+          </svg>
+        </div>
+        <div class="contact-box__info">
+          <a href="https://goo.gl/maps/Ssm6KJgKhTvPy57LA" class="contact-box__info--title" target="new">Tresorita Agro Farm</a>
+          <p class="contact-box__info--subtitle">Asnas, Maharashtra</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-sm" style="background-color: #212121;">
+    <div class="container">
+      <div class="row py-4 text-center text-white">
+        <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+          Connect with us on social media
+        </div>
+        <div class="col-lg-7 col-md-6">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/tresorita" target="new"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container mt-5">
+    <div class="row text-white justify-content-center mt-3 pb-3">
+      <div class="col-12 col-sm-6 col-lg-6 mx-auto">
+        <h5 class="text-capitalize fw-bold">Tresorita</h5>
+        <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+        <p class="lh-lg">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d568.4124756812292!2d73.00473540999356!3d19.598543465370675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be70ba35ad54619%3A0x21d5a749607e0b4e!2stresorita%20Agrofarm!5e1!3m2!1sen!2sin!4v1629791512917!5m2!1sen!2sin" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </p>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+        <h5 class="text-capitalize fw-bold">Useful links</h5>
+        <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+        <ul class="list-inline campany-list">
+          <li><a href="images.php">Images</a></li>
+          <li><a href="contact.php">Contact</a></li>
+          <li><a href="charityfund.php">Tresorita Charity Fund</a></li>
+          <?php
+            if (isset($_SESSION["useruid"])) {
+              echo '<li><a href="includes/logout.inc.php">Logout</a></li>';
+            }
+            else {
+              echo '<li><a href="login.php">Login</a></li>';
+              echo '<li><a href="signup.php">Sign up</a></li>';
+            }
+          ?>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+        <h5 class="text-capitalize fw-bold">Contact</h5>
+        <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
+        <ul class="list-inline campany-list">
+          <li><a href="mailto:josi@inoways.com">josi@inoways.com</a></li>
+          <li><a href="mailto:sjosi0607@gmail.com">sjosi0607@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+<a href="#" class="shadow btn-primary rounded-circle back-to-top">
+  <i class="fas fa-chevron-up"></i>
+</a>
+
+
+
+   
+    <script src="assets/vendors/glightbox/js/glightbox.min.js"></script>
+
+    <script type="text/javascript">
+      const lightbox = GLightbox({
+        'href': '',
+        'type': 'video',
+        'source': 'youtube',
+        'width': 900,
+        'autoPlayVideos': 'true',
+});
+    
+    </script>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        function aboutUs() {
+          location.replace('./aboutus.php')
+        }
+    </script>
+     <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
