@@ -57,11 +57,11 @@
     <h2 class="title">Login</h2>
     <form action="includes/login.inc.php" method="post">
       <div class="user-box">
-        <input type="text" name="uid" required="">
+        <input type="text" name="uid" required="" autocomplete="off">
         <label>Username/Email</label>
       </div>
       <div class="user-box">
-        <input type="password" name="pwd" required="">
+        <input type="password" name="pwd" required="" autocomplete="off">
         <label>Password</label>
       </div>
       <span></span>

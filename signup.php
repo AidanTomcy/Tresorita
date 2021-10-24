@@ -57,23 +57,23 @@
     <h2 class="title">Signup</h2>
     <form action="includes/signup.inc.php" method="post">
       <div class="user-box">
-        <input type="text" name="name" required="">
+        <input type="text" name="name" required="" autocomplete="off">
         <label>Name</label>
       </div>
       <div class="user-box">
-        <input type="text" name="uid" required="">
+        <input type="text" name="uid" required="" autocomplete="off">
         <label>Username</label>
       </div>
       <div class="user-box">
-        <input type="text" name="email" required="">
+        <input type="text" name="email" required="" autocomplete="off">
         <label>Email</label>
       </div>
       <div class="user-box">
-        <input type="password" name="pwd" required="">
+        <input type="password" name="pwd" required="" autocomplete="off">
         <label>Password</label>
       </div>
       <div class="user-box">
-        <input type="password" name="pwdrepeat" required="">
+        <input type="password" name="pwdrepeat" required="" autocomplete="off">
         <label>Password Confirmation</label>
       </div>
       <span></span>

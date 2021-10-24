@@ -192,16 +192,16 @@
           <h4 class="display-3--title mb-5 title">Contact us</h4>
           <form action="submitform.php" method="post" class="row">
             <div class="col-lg-6 col-md mb-3">
-              <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg" name="firstName">
+              <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg" name="firstName" autocomplete="off">
             </div>
             <div class="col-lg-6 col-md mb-3">
-              <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg" name="lastName">
+              <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg" name="lastName" autocomplete="off">
             </div>
             <div class="col-lg-12 mb-3">
-              <input type="email" placeholder="Email Address" id="inputEmail" class="shadow form-control form-control-lg" name="email">
+              <input type="email" placeholder="Email Address" id="inputEmail" class="shadow form-control form-control-lg" name="email" autocomplete="off">
             </div>
             <div class="col-lg-12 mb-3">
-              <textarea name="message" placeholder="Message" id="message" rows="8" class="shadow form-control form-control-lg" name="message"></textarea>
+              <textarea name="message" placeholder="Message" id="message" rows="8" class="shadow form-control form-control-lg" name="message" autocomplete="off"></textarea>
             </div>
             <div class="text-center d-grid mt-1">
               <input type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
