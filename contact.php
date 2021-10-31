@@ -65,13 +65,13 @@
   <div class="card level-3">
 	<h5>Contact Us</h5>
     <br><p>If you have any doubts, complaints or feedback, Please don't hesitate to contact:</p>
-    <p>1) Josi Cherian
+    <p>1&#41; Josi Cherian
         <ul>
             <li>Email: josi@inoways.com</li>
             <li>Phone: +91 98201 84902</li>
         </ul>
     </p>
-    <p>2) Susan Josi
+    <p>2&#41; Susan Josi
         <ul>
             <li>Email: sjosi0607@gmail.com</li>
             <li>Phone: +91 98201 54921</li>
