@@ -1,5 +1,9 @@
 # Tresorita
 
+<p align="center">
+    <img src="images/tresorita-logo.jpg">
+</p>
+
 This website is created for Mr. Josi Cherian. To contact him:
 
 1. Email : [josi@inoways.com](mailto:josi@inoways.com)
@@ -35,13 +39,13 @@ Here is what the submitform.php file looks like:
 ## Tools Used
 
 <p align="center">
-    <a href="https://php.net" target="new"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" height="100px"></a>&nbsp;
-    <a href="https://mysql.com" target="new"><img src="https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png" height="100px"></a>&nbsp;
-    <a href="https://sass-lang.com" target="new"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1200px-Sass_Logo_Color.svg.png" height="100px"></a>
+    <a href="https://php.net" target="_blank_"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" height="100px"></a>&nbsp;
+    <a href="https://mysql.com" target="_blank_"><img src="https://download.logo.wine/logo/MySQL/MySQL-Logo.wine.png" height="100px"></a>&nbsp;
+    <a href="https://sass-lang.com" target="_blank_"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1200px-Sass_Logo_Color.svg.png" height="100px"></a>
     <br><br>
     <img src="https://pluralsight2.imgix.net/paths/images/javascript-542e10ea6e.png" height="100px">&nbsp;
-    <a href="https://npmjs.com" target="new"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/540px-Npm-logo.svg.png" height="100px"></a>&nbsp;&nbsp;
-    <a href="https://getbootstrap.com" target="new"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" height="100px"></a>
+    <a href="https://npmjs.com" target="_blank_"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/540px-Npm-logo.svg.png" height="100px"></a>&nbsp;&nbsp;
+    <a href="https://getbootstrap.com" target="_blank_"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" height="100px"></a>
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" width="100px">
     <br><br>
     <a href="https://fontawesome.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Font_Awesome_5_logo_black.svg/1920px-Font_Awesome_5_logo_black.svg.png" height="100px">&nbsp;</a>
