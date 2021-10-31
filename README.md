@@ -4,7 +4,7 @@
     <img src="images/tresorita-logo.jpg">
 </p>
 
-This website is created for Mr. Josi Cherian. To contact him:
+    This website is created for Mr. Josi Cherian. To contact him:
 
 1. Email : [josi@inoways.com](mailto:josi@inoways.com)
 2. Phone No. : [+91 98201 84902](tel:+919820184902)
