@@ -190,24 +190,33 @@
       <div class="col-12 col-lg-6 bg-white shadow p-3">
         <div class="form w-100 pb-2">
           <h4 class="display-3--title mb-5 title">Contact us</h4>
-          <form action="submitform.php" method="post" class="row">
+          <form action="includes/submitform.inc.php" method="post" class="row">
             <div class="col-lg-6 col-md mb-3">
-              <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg" name="firstName" autocomplete="off">
+              <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg" name="firstName" autocomplete="off" required="">
             </div>
             <div class="col-lg-6 col-md mb-3">
-              <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg" name="lastName" autocomplete="off">
+              <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg" name="lastName" autocomplete="off" required="">
             </div>
             <div class="col-lg-12 mb-3">
-              <input type="email" placeholder="Email Address" id="inputEmail" class="shadow form-control form-control-lg" name="email" autocomplete="off">
+              <input type="email" placeholder="Email Address" id="inputEmail" class="shadow form-control form-control-lg" name="email" autocomplete="off" required="">
             </div>
             <div class="col-lg-12 mb-3">
-              <textarea name="message" placeholder="Message" id="message" rows="8" class="shadow form-control form-control-lg" name="message" autocomplete="off"></textarea>
+              <textarea name="message" placeholder="Message" id="message" rows="8" class="shadow form-control form-control-lg" name="message" autocomplete="off" required=""></textarea>
             </div>
             <div class="text-center d-grid mt-1">
-              <input type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
+              <input type="submit" class="btn btn-primary rounded-pill pt-3 pb-3" name="submit">
                 Submit
                 <i class="fas fa-paper-plane"></i>
               </button>
+              <?php
+                if (isset($_GET["error"])) {
+                  if ($_GET["error"] == "invalidemail") {
+                    echo "<p>Invalid Email Address</p>";
+                  } else if ($_GET["error"] == "none") {
+                    echo "<p>Thank you for reaching out to us.</p>";
+                  }
+                }
+              ?>
             </div>
           </form>
         </div>
