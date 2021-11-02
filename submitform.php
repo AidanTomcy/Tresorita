@@ -5,9 +5,11 @@
   require 'smtp/PHPMailer.php';
   require 'smtp/SMTP.php';
   use Exception;
-  use  PHPMailer;
+  use PHPMailer;
+  use SMTP;
 
   $mail = new PHPMailer();
+  $test = new SMTP();
   $mail->IsSMTP();
 
   $mail->SMTPDebug  = 0;  
@@ -15,6 +17,7 @@
   $mail->SMTPSecure = "tls";
   $mail->Port       = 587;
   $mail->Host       = "smtp.gmail.com";
+  $test->SMTPSecure = "ssl";
   $mail->Username   = "info.saintsforus@gmail.com";
   $mail->Password   = "Aidan@1709";
 
