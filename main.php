@@ -211,9 +211,9 @@
               <?php
                 if (isset($_GET["error"])) {
                   if ($_GET["error"] == "invalidemail") {
-                    echo "<p>Invalid Email Address</p>";
+                    echo '<p style="color:black;">Invalid Email Address</p>';
                   } else if ($_GET["error"] == "none") {
-                    echo "<p>Thank you for reaching out to us.</p>";
+                    echo '<p style="color:black;">Thank you for reaching out to us.</p>';
                   }
                 }
               ?>

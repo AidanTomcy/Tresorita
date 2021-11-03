@@ -136,7 +136,7 @@
     $sql = "INSERT INTO form_submissions (firstName, lastName, emailId, message) VALUES (?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../signup.php?error=stmtfailed");
+        header("location: ../main.php?error=stmtfailed");
         exit();
     }
 
