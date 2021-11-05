@@ -43,9 +43,10 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link navbar-title active">&nbsp;&nbsp;Tresorita</a></li>
           <li class="nav-item"><a class="nav-link" href="main.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="aboutus.php">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="images.php">Images</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="charityfund.php">Tresorita Charity Fund</a></li>
+          <li class="nav-item"><a class="nav-link" href="charityfund.php">Tresorita Trust</a></li>
           <?php 
             if (isset($_SESSION["useruid"])) {
               echo '<li class="nav-item"><a class="nav-link" href="includes/logout.inc.php">Logout</a></li>';

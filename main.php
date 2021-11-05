@@ -48,6 +48,7 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link navbar-title active">&nbsp;&nbsp;Tresorita</a></li>
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="main.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.php">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="images.php">Images</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="charityfund.php">Tresorita Trust</a></li>
