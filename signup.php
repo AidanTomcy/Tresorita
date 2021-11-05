@@ -92,7 +92,7 @@
       } else if ($_GET["error"] == "invaliduid") {
         echo '<p style="color:white;">Choose a proper username.</p>';
       } else if ($_GET["error"] == "invalidemail") {
-        echo '<p style="color:white;">Enter a valid email id.</p>';
+        echo '<p style="color:white;">Please enter a valid email id.</p>';
       } else if ($_GET["error"] == "passwordsdontmatch") {
         echo '<p>Passwords don\'t match.</p>';
       } else if ($_GET["error"] == "stmtfailed") {
