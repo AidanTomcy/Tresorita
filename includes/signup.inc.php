@@ -27,7 +27,7 @@
       exit();
     }
     if (pwdMatch($pwd, $pwdrepeat) !== false) {
-      header("location: ../signup.php?error=passwordinvalid");
+      header("location: ../signup.php?error=passwordsdontmatch");
       exit();
     }
     if (uidExists($conn, $username, $email) !== false) {
