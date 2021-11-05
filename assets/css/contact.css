@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 body {
-  background: linear-gradient(to right, #00AAFF, #00FF6C);
-  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #00aaff, #00ff6c);
+  font-family: "Roboto", sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -18,7 +18,7 @@ body {
   cursor: default;
 }
 .card:before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   background-color: #ccc;

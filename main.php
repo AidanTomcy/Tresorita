@@ -214,6 +214,8 @@
                     echo '<p style="color:black;">Invalid Email Address</p>';
                   } else if ($_GET["error"] == "none") {
                     echo '<p style="color:black;">Thank you for reaching out to us.</p>';
+                  } else if ($_GET["error"] == "stmtfailed") {
+                    echo '<p style="color:black;">Something went wrong. Please try again later.</p>';
                   }
                 }
               ?>
