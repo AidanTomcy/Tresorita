@@ -88,19 +88,19 @@
 
     if (isset($_GET["error"])) {
       if ($_GET["error"] == "emptyinput") {
-        echo "<p>Please fill in all fields.</p>";
+        echo '<p style="color:white;">Please fill in all fields.</p>';
       } else if ($_GET["error"] == "invaliduid") {
-        echo "<p>Choose a proper username.</p>";
+        echo '<p style="color:white;">Choose a proper username.</p>';
       } else if ($_GET["error"] == "invalidemail") {
-        echo "<p>Enter a valid email id.</p>";
+        echo '<p style="color:white;">Enter a valid email id.</p>';
       } else if ($_GET["error"] == "passwordsdontmatch") {
-        echo "<p>Password don't match.</p>";
+        echo '<p>Passwords don\'t match.</p>';
       } else if ($_GET["error"] == "stmtfailed") {
-        echo '<p>Something went wrong. Try again.</p>';
+        echo '<p style="color:white;">Something went wrong. Please try again.</p>';
       } else if ($_GET["error"] == "usernametaken") {
-        echo '<p>Username taken. Choose another username.</p>';
+        echo '<p style="color:white;">Username taken. Please choose another username.</p>';
       } else if ($_GET["error"] == "none") {
-        echo '<p>Signup Successful. Please <a href="login.php">Login</a>.</p>';
+        echo '<p style="color:white;">Signup Successful. Please <a href="login.php">Login</a>.</p>';
       }
     }
     ?>

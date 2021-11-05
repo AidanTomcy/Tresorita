@@ -76,9 +76,9 @@
 
     if (isset($_GET["error"])) {
       if ($_GET["error"] == "emptyinput") {
-        echo "<p>Please fill in all fields.</p>";
+        echo '<p style="color:white;">Please fill in all fields.</p>';
       } else if ($_GET["error"] == "wronglogin") {
-        echo "<p>Incorrect username/password</p>";
+        echo '<p style="color:white;">Incorrect username/password</p>';
       }
     }
     ?>
