@@ -9,30 +9,37 @@ This website is created for Mr. Josi Cherian. To contact him:
 1. Email : [josi@inoways.com](mailto:josi@inoways.com)
 2. Phone No. : [+91 98201 84902](tel:+919820184902)
 
-This repository has been forked from my real account ([AidanTomcy](https://github.com/AidanTomcy)) as I had originally published it there.  
+All of the website code is in php/src.
 The backend for this website has been made with PHP and MySQL.  
 The CSS Preprocessor I used in this project is Sass.  
 This website uses the Bootstrap and Font Awesome libraries.  
-All of the major styles are in [assets/css/style.css](https://github.com/Tresorita/tresorita-website/blob/master/assets/css/style.css).  
+All of the major styles are in assets/css/style.css.  
 The usersTable.sql only contains the code for the users table.  
 There is no React, Angular, Vue or any frontend library.  
 Warning: This website is not yet hosted.  
 Please do make a pull request if you find a bug.
 
-The [submitform.php](https://github.com/Tresorita/tresorita-website/blob/master/submitform.php) is like this because
-I am trying to figure out how to mail the contents of the form in [main.php](https://github.com/Tresorita/tresorita-website/blob/master/main.php) to a specific email address.
-Here is what the submitform.php file looks like:
+The includes/submitform.inc.php stores the contents the user fills in in a table.
+Here is what it looks like:
 
 ```php
 <?php
-    $sendToEmail = 'josi@inoways.com';
-    $sendFromEmail = '';
-    $subject = 'New form submission in Tresorita Website';
-    $content = '';
-    $firstName = '';
-    $lastName = '';
-    $email = '';
-    $message = '';
+  if (isset($_POST["submit"])) {
+    #Storing Contents Of Contact Form in main.php in database
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    require_once('dbh.inc.php');
+    require_once('functions.inc.php');
+
+    if (invalidEmail($email) !== false) {
+      header("location: ../index.php?error=invalidemail");
+    }
+
+    storeContentsOfContact($conn, $firstName, $lastName, $email, $message);
+  }
 
 ```
 
