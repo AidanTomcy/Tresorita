@@ -10,7 +10,7 @@
     require_once('functions.inc.php');
 
     if (invalidEmail($email) !== false) {
-      header("location: ../main.php?error=invalidemail");
+      header("location: ../index.php?error=invalidemail");
     }
 
     storeContentsOfContact($conn, $firstName, $lastName, $email, $message);

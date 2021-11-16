@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/signup.css">
+  <link rel="stylesheet" href="assets/css/login.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/vendors/glightbox/css/glightbox.min.css">
@@ -26,7 +26,7 @@
   <meta name="msapplication-TileColor" content="#ffffff" />
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
   <meta name="theme-color" content="#ffffff" />
-  <title>Sign Up</title>
+  <title>Login</title>
 </head>
 
 <body>
@@ -41,13 +41,13 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link navbar-title active">&nbsp;&nbsp;Tresorita</a></li>
-          <li class="nav-item"><a class="nav-link" href="main.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="aboutus.php">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="images.php">Images</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="charityfund.php">Tresorita Trust</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="signup.php">Sign up</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="login.php">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="signup.php">Sign up</a></li>
           </li>
         </ul>
       </div>
@@ -55,27 +55,15 @@
   </nav>
 
   <div class="login-box">
-    <h2 class="title">Signup</h2>
-    <form action="includes/signup.inc.php" method="post">
-      <div class="user-box">
-        <input type="text" name="name" required="" autocomplete="off">
-        <label>Name</label>
-      </div>
+    <h2 class="title">Login</h2>
+    <form action="includes/login.inc.php" method="post">
       <div class="user-box">
         <input type="text" name="uid" required="" autocomplete="off">
-        <label>Username</label>
-      </div>
-      <div class="user-box">
-        <input type="text" name="email" required="" autocomplete="off">
-        <label>Email</label>
+        <label>Username/Email</label>
       </div>
       <div class="user-box">
         <input type="password" name="pwd" required="" autocomplete="off">
         <label>Password</label>
-      </div>
-      <div class="user-box">
-        <input type="password" name="pwdrepeat" required="" autocomplete="off">
-        <label>Password Confirmation</label>
       </div>
       <span></span>
       <span></span>
@@ -90,18 +78,8 @@
     if (isset($_GET["error"])) {
       if ($_GET["error"] == "emptyinput") {
         echo '<p style="color:white;">Please fill in all fields.</p>';
-      } else if ($_GET["error"] == "invaliduid") {
-        echo '<p style="color:white;">Choose a proper username.</p>';
-      } else if ($_GET["error"] == "invalidemail") {
-        echo '<p style="color:white;">Please enter a valid email id.</p>';
-      } else if ($_GET["error"] == "passwordsdontmatch") {
-        echo '<p>Passwords don\'t match.</p>';
-      } else if ($_GET["error"] == "stmtfailed") {
-        echo '<p style="color:white;">Something went wrong. Please try again.</p>';
-      } else if ($_GET["error"] == "usernametaken") {
-        echo '<p style="color:white;">Username taken. Please choose another username.</p>';
-      } else if ($_GET["error"] == "none") {
-        echo '<p style="color:white;">Signup Successful. Please <a href="login.php">Login</a>.</p>';
+      } else if ($_GET["error"] == "wronglogin") {
+        echo '<p style="color:white;">Incorrect username/password</p>';
       }
     }
     ?>
