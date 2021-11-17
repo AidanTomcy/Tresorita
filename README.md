@@ -17,7 +17,7 @@ All of the major styles are in assets/css/style.css.
 The usersTable.sql only contains the code for the users table.  
 There is no React, Angular, Vue or any frontend library.  
 Warning: This website is not yet hosted.  
-Please do make a pull request if you find a bug.
+Please do create an issue if you find a bug.
 
 The includes/submitform.inc.php stores the contents the user fills in in a table.
 Here is what it looks like:
