@@ -6,7 +6,7 @@
 
   #Throw Error Message If Any Fields Are Empty
   function emptyInputSignup($name, $email, $username, $pwd, $pwdrepeat) {
-      $result;
+      $result = '';
       if (empty($name) || empty($email) || empty($username) || empty($pwd) || empty($pwdrepeat)) {
           $result = true;
       }
@@ -18,7 +18,7 @@
   
   #Checks For Invalid Username
   function invalidUid($username) {
-    $result;
+    $result = '';
     if (preg_match ('/[a-zA-Z0-9 ]/', $username)) {
         $result = false;
     }
@@ -30,7 +30,7 @@
 
   #Checks For Invalid Email
   function invalidEmail($email) {
-    $result;
+    $result = '';
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $result = true;
     }
@@ -42,7 +42,7 @@
 
   #Checks If Passwords Match
   function pwdMatch($pwd, $pwdrepeat) {
-    $result;
+    $result = '';
     if ($pwd !== $pwdrepeat) {
         $result = true;
     }
@@ -97,7 +97,7 @@
 
   #Checks If Any Fields Are Empty
   function emptyInputLogin($username, $pwd) {
-    $result;
+    $result = '';
     if (empty($username) || empty($pwd)) {
         $result = true;
     }
