@@ -288,7 +288,7 @@
         <div class="col-lg-7 col-md-6">
           <a href="#"><i class="fab fa-facebook"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="https://github.com/tresorita" target="new"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/aidantomcy/tresorita-website" target="_blank"><i class="fab fa-github"></i></a>
           <a href="#"><i class="fab fa-linkedin"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
@@ -354,7 +354,7 @@
         'source': 'youtube',
         'width': 900,
         'autoPlayVideos': 'true',
-});
+      });
     
     </script>
     <script>
