@@ -1,6 +1,6 @@
 <?php
   if (isset($_POST["submit"])) {
-    #Storing Contents Of Contact Form in main.php in database
+    #Storing Contents Of Contact Form in index.php in database
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
