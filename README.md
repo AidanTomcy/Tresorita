@@ -11,6 +11,7 @@ This website is created for Mr. Josi Cherian. To contact him:
 
 All of the website code is in php/src.
 The backend for this website has been made with PHP and MySQL.  
+The frontend code for this website has been taken from [this repository](https://github.com/MuriungiPatrick/Bootstrap-5-portfolio-template)  
 The CSS Preprocessor I used in this project is Sass.  
 This website uses the Bootstrap and Font Awesome libraries.  
 All of the major styles are in assets/css/style.css.  
