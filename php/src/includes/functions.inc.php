@@ -1,10 +1,10 @@
 <?php
 
-  #Error Handling Functions For Sign Up and Login
+  # Error Handling Functions For Sign Up and Login
 
-  #Error Handling For Sign Up
+  # Error Handling For Sign Up
 
-  #Throw Error Message If Any Fields Are Empty
+  # Throw Error Message If Any Fields Are Empty
   function emptyInputSignup($name, $email, $username, $pwd, $pwdrepeat) {
       $result = '';
       if (empty($name) || empty($email) || empty($username) || empty($pwd) || empty($pwdrepeat)) {
@@ -16,7 +16,7 @@
       return $result;
   }
   
-  #Checks For Invalid Username
+  # Checks For Invalid Username
   function invalidUid($username) {
     $result = '';
     if (preg_match ('/[a-zA-Z0-9 ]/', $username)) {
@@ -28,7 +28,7 @@
     return $result;
 }
 
-  #Checks For Invalid Email
+  # Checks For Invalid Email
   function invalidEmail($email) {
     $result = '';
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -40,7 +40,7 @@
     return $result;
 }
 
-  #Checks If Passwords Match
+  # Checks If Passwords Match
   function pwdMatch($pwd, $pwdrepeat) {
     $result = '';
     if ($pwd !== $pwdrepeat) {
@@ -52,7 +52,7 @@
     return $result;
 }
 
-  #Checks If The Username Exists
+  # Checks If The Username Exists
   function uidExists($conn, $username, $email) {
     $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
     $stmt = mysqli_stmt_init($conn);
@@ -93,9 +93,9 @@
     header("location: ../signup.php?error=none");
 }
 
-  #Error Handling For Login
+  # Error Handling For Login
 
-  #Checks If Any Fields Are Empty
+  # Checks If Any Fields Are Empty
   function emptyInputLogin($username, $pwd) {
     $result = '';
     if (empty($username) || empty($pwd)) {
