@@ -1,3 +1,4 @@
 php/src/exampleData.json
 php/src/.editorconfig
 .vs
+php/src/includes/.env
