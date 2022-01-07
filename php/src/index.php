@@ -205,8 +205,8 @@
               <textarea name="message" placeholder="Message" id="message" rows="8" class="shadow form-control form-control-lg" name="message" autocomplete="off" required=""></textarea>
             </div>
             <div class="text-center d-grid mt-1">
-              <input type="submit" class="btn btn-primary rounded-pill pt-3 pb-3" name="submit">
-                Submit
+              <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3" name="submit">
+                Submit&nbsp;&nbsp;
                 <i class="fas fa-paper-plane"></i>
               </button>
               <?php
