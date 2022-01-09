@@ -50,7 +50,7 @@
   
       //Recipients
       $mail->setFrom('aidantomcy@gmail.com', 'Tresorita Website');
-      $mail->addAddress('aidantomcy@gmail.net', 'Tresorita Website');
+      $mail->addAddress('aidantomcy@gmail.com', 'Tresorita Website');
       $mail->addAddress('aidantomcy@gmail.com');
       $mail->addReplyTo('aidantomcy@gmail.com', 'Tresorita Website');
   
