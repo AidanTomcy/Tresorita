@@ -10,8 +10,6 @@
     if (invalidEmail($email) !== false) {
       header("location: ../index.php?error=invalidemail");
     }
-
-
   }
 
   //Import PHPMailer classes into the global namespace
