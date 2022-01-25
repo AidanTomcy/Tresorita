@@ -15,11 +15,8 @@ The frontend code for this website has been taken from [this repository](https:/
 This website uses the Bootstrap and Font Awesome libraries.  
 All of the major styles are in assets/css/style.css.  
 The usersTable.sql only contains the code for the users table.  
-There is no React, Angular, Vue or any frontend library.  
 This website is not yet hosted.  
 Please do create an issue if you find a bug.
-
-The includes/submitform.inc.php sends the contents to an email id.
 
 ## Tools Used
 
