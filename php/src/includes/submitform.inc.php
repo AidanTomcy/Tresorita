@@ -47,8 +47,17 @@
       //Content
       $mail->isHTML(true); //Set email format to HTML
       $mail->Subject = 'New Form Submission in Tresorita Website'; // Mail Subject
-      $mail->Body    = '<h1>New Form Submission</h1><p>There is a new form submission in the website, here are the details: <br>Name: '. $fullName . '<br>Email: ' . $email . '<br>Message: ' . $message .'</p>'; // Mail Body
-      $mail->AltBody = 'New Form Submission\n\nThere is a new form submission in the website, here are the details:\nName: '. $fullName . '\nEmail: ' . $email . '\nMessage: ' . $message; // Alternate Mail Body for non-HTML mail clients
+      
+      // Mail Body
+      $mail->Body    = '<h1>New Form Submission</h1>';
+      $mail->Body   .= '<p>There is a new form submission in the website, here are the details:';
+      $mail->Body   .=' <br>Name: '. $fullName . '<br>Email: ' . $email;
+      $mail->Body   .='<br>Message: ' . $message .'</p>';
+      
+      // Alternate Mail Body for non-HTML mail clients
+      $mail->AltBody  = 'New Form Submission\n\nThere is a new form submission in the website,';
+      $mail->AltBody .= 'here are the details:\nName: '. $fullName . '\nEmail: ' . $email;
+      $mail->AltBody .= '\nMessage: ' . $message;
   
       $mail->send();
       echo "Message Sent Successfully! Redirecting...";
