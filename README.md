@@ -1,4 +1,4 @@
-# Tresorita
+# <p align="center">Tresorita</p>
 
 <p align="center">
     <img src="php/src/images/tresorita-logo.jpg">
