@@ -203,7 +203,7 @@ session_start();
                 <input type="email" placeholder="Email Address" id="inputEmail" class="shadow form-control form-control-lg" name="email" autocomplete="off" required="">
               </div>
               <div class="col-lg-12 mb-3">
-                <textarea name="message" placeholder="Message" id="message" rows="8" class="shadow form-control form-control-lg" name="message" autocomplete="off" required=""></textarea>
+                <textarea name="message" placeholder="Message" id="message" rows="8" class="shadow form-control form-control-lg" autocomplete="off" required=""></textarea>
               </div>
               <div class="text-center d-grid mt-1">
                 <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3" name="submit">
