@@ -72,8 +72,8 @@ session_start();
       <div class="row align-items-center text-white">
         <div class="col-md-6 intros text-start">
           <h1 class="display-2">
-            <span class="display-2--intro title">Tresorita</span>
-            <span class="display-2--description lh-base">
+            <div class="display-2--intro title">Tresorita</div>
+            <div class="display-2--description lh-base">
               <p class="motto">For your well-being...</p>
               <?php
               if (isset($_SESSION["useruid"])) {
@@ -81,7 +81,7 @@ session_start();
               }
               ?>
 
-            </span>
+            </div>
           </h1>
           <button onclick="aboutUs();" type="button" class="rounded-pill btn-rounded" id="know-more">Know more
             <span><i class="fas fa-arrow-right"></i></span>
