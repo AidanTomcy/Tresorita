@@ -177,7 +177,6 @@ session_start();
       <div class="row text-white">
         <div class="col-12 col-lg-6 gradient shadow p-3">
           <div class="cta-info w-100">
-            <h4 class="display-4 fw-bold"></h4>
             <p class="lh-lg">
               If you have any doubts/complaints/feedback, please fill this form with the appropriate details and we will get back to you.
             </p>
