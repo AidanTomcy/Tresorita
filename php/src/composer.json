@@ -1,8 +1,0 @@
-{
-  "websiteName": "Tresorita",
-  "creator": "Aidan Tomcy",
-  "require": {
-    "phpmailer/phpmailer": "^6.5",
-    "symfony/dotenv": "^6.0"
-  }
-}
