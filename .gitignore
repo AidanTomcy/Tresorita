@@ -1,5 +1,3 @@
-php/src/exampleData.json
-php/src/.editorconfig
-php/src/includes/.env
 .dccache
-php/src/vendor
+vendor/
+.env
