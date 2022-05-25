@@ -8,7 +8,6 @@ function isValidEmail($email)
   return false;
 }
 
-// Getting data from form
 if (isset($_POST["submit"])) {
   $firstName = $_POST['firstName'];
   $lastName = $_POST['lastName'];
@@ -21,48 +20,39 @@ if (isset($_POST["submit"])) {
   }
 }
 
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use Symfony\Component\Dotenv\Dotenv;
 
-//Load Composer's autoloader
 require '../vendor/autoload.php';
 
-// PHPMailer instance
 $mail = new PHPMailer(true);
 $dotenv = new Dotenv();
 $dotenv->load(__DIR__ . '/.env');
 $password = $_SERVER['EMAIL_PASSWORD'] ?? '';
 
 try {
-  //Server settings
-  $mail->isSMTP(); //Send using SMTP
-  $mail->Host       = 'smtp.gmail.com'; // SMTP Server
-  $mail->SMTPAuth   = true; //Enable SMTP authentication
-  $mail->Username   = 'info.saintsforus@gmail.com'; // SMTP username
-  $mail->Password   = $password; //SMTP password
-  $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //Enable implicit TLS encryption
-  $mail->Port       = 465; //TCP port to connect to
+  $mail->isSMTP();
+  $mail->Host       = 'smtp.gmail.com';
+  $mail->SMTPAuth   = true;
+  $mail->Username   = 'info.saintsforus@gmail.com';
+  $mail->Password   = $password;
+  $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+  $mail->Port       = 465;
 
-  //Recipients
   $mail->setFrom('aidantomcy@gmail.com', 'Tresorita Website');
   $mail->addAddress('aidantomcy@gmail.com', 'Tresorita Website');
   $mail->addAddress('aidantomcy@gmail.com');
   $mail->addReplyTo('aidantomcy@gmail.com', 'Tresorita Website');
 
-  //Content
-  $mail->isHTML(true); //Set email format to HTML
-  $mail->Subject = 'New Form Submission in Tresorita Website'; // Mail Subject
+  $mail->isHTML(true);
+  $mail->Subject = 'New Form Submission in Tresorita Website';
 
-  // Mail Body
   $mail->Body    = '<h1>New Form Submission</h1>';
   $mail->Body   .= '<p>There is a new form submission in the website, here are the details:';
   $mail->Body   .= ' <br>Name: ' . $fullName . '<br>Email: ' . $email;
   $mail->Body   .= '<br>Message: ' . $message . '</p>';
 
-  // Alternate Mail Body for non-HTML mail clients
   $mail->AltBody  = 'New Form Submission\n\nThere is a new form submission in the website,';
   $mail->AltBody .= 'here are the details:\nName: ' . $fullName . '\nEmail: ' . $email;
   $mail->AltBody .= '\nMessage: ' . $message;
