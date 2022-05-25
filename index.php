@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,59 +10,12 @@ session_start();
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
-  <link rel="manifest" href="img/manifest.json" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#ffffff" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <title>Tresorita</title>
 </head>
 
 <body>
-
-  <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.php">
-        <img src="images/logo.png" alt="tresorita logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link navbar-title active">&nbsp;&nbsp;Tresorita</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="aboutus.php">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="images.php">Images</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="charityfund.php">Tresorita Trust</a></li>
-          <?php
-          if (isset($_SESSION["useruid"])) {
-            echo '<li class="nav-item"><a class="nav-link" href="includes/logout.inc.php">Logout</a></li>';
-          } else {
-            echo '<li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>';
-            echo '<li class="nav-item"><a class="nav-link" href="signup.php">Sign up</a></li>';
-          }
-          ?>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
+  <?php include "includes/navbar.php"; ?>
 
   <section id="home" class="intro-section">
     <div class="container">
@@ -75,12 +25,6 @@ session_start();
             <div class="display-2--intro title">Tresorita</div>
             <div class="display-2--description lh-base">
               <p class="motto">For your well-being...</p>
-              <?php
-              if (isset($_SESSION["useruid"])) {
-                echo '<p class="welcome">Welcome, ' . $_SESSION["useruid"] . '</p>';
-              }
-              ?>
-
             </div>
           </h1>
           <button onclick="aboutUs();" type="button" class="rounded-pill btn-rounded" id="know-more">Know more
@@ -313,14 +257,6 @@ session_start();
             <li><a href="images.php">Images</a></li>
             <li><a href="contact.php">Contact</a></li>
             <li><a href="charityfund.php">Tresorita Charity Fund</a></li>
-            <?php
-            if (isset($_SESSION["useruid"])) {
-              echo '<li><a href="includes/logout.inc.php">Logout</a></li>';
-            } else {
-              echo '<li><a href="login.php">Login</a></li>';
-              echo '<li><a href="signup.php">Sign up</a></li>';
-            }
-            ?>
           </ul>
         </div>
         <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
