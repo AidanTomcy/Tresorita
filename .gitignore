@@ -1,3 +1,4 @@
 .dccache
 vendor/
 .env
+node_modules/
