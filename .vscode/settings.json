@@ -1,5 +1,0 @@
-{
-  "snyk.features.codeQuality": false,
-  "snyk.features.codeSecurity": false,
-  "snyk.features.openSourceSecurity": false
-}
