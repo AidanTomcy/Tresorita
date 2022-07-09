@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/static/css/contact.css">
   <link rel="stylesheet" href="/static/css/style.css">
   <link rel="stylesheet" href="/static/css/fontawesome.css">
   <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+    
+    body {
+      background: linear-gradient(to right, #00aaff, #00ff6c);
+      font-family: "Roboto", sans-serif;
+    }
+
+    *, *::before, after, *::after {
+      box-sizing: border-box;
+    }
+    
+    .card {
+      background-color: #fff;
+      border-radius: 4px;
+      max-width: 700px;
+      margin: 10% auto;
+      height: 380px;
+      position: relative;
+      padding: 34px;
+      color: #444;
+      cursor: default;
+    }
+    
+    .card:before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: #ccc;
+      left: 20px;
+      right: 20px;
+      bottom: 0;
+      top: 50%;
+      z-index: -1;
+      box-shadow: 0 0 40px #999;
+      transition: box-shadow 0.2s ease-in-out;
+    }
+    
+    .card.level-3:hover:before {
+      box-shadow: 0 0 80px #999;
+    }
+    
+    .card h5 {
+      font-weight: 300;
+      font-size: 30px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
   <title>Contact Us</title>
 </head>
 
