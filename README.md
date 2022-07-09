@@ -1,7 +1,7 @@
 # <p align="center">Tresorita</p>
 
 <p align="center">
-    <img src="images/tresorita-logo.jpg">
+    <img src="website/public/images/tresorita-logo.jpg">
 </p>
 
 This website is created for Mr. Josi Cherian. To contact him:
