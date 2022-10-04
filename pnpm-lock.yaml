@@ -2,10 +2,12 @@ lockfileVersion: 5.4
 
 specifiers:
   express: ^4.18.1
+  helmet: ^6.0.0
   nodemon: ^2.0.18
 
 dependencies:
   express: 4.18.1
+  helmet: 6.0.0
 
 devDependencies:
   nodemon: 2.0.20
@@ -295,6 +297,11 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
+    dev: false
+
+  /helmet/6.0.0:
+    resolution: {integrity: sha512-FO9RpR1wNJepH/GbLPQVtkE2eESglXL641p7SdyoT4LngHFJcZheHMoyUcjCZF4qpuMMO1u5q6RK0l9Ux8JBcg==}
+    engines: {node: '>=14.0.0'}
     dev: false
 
   /http-errors/2.0.0:
